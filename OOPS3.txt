@@ -1,0 +1,24 @@
+oops concept of the private data member ..
+Private == The class member declared as the private can be accessed only by the function inside the class. They are not allowed to be accessed directly by an object or function outside the class .
+#include<iostream>
+using namespace std;
+
+class Circle {
+    // private data member 
+    private:
+    double radius=5.0;
+    //public member function
+    public:
+    double compute_area(){
+     // member function can acess private 
+     // data member radius 
+     return 3.14*radius*radius;
+    }
+};
+int main(){
+    //creating object of the class
+    Circle c;
+    
+    cout<<"Area of the circle "<<c.compute_area();
+    return 0;
+}
