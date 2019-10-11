@@ -1,0 +1,39 @@
+// Friend class and the function in cpp
+// Friend class - A Friend class can access private and the protected member of the other class in  which  it is declared as Friend
+//it is sometimes useful to allow a particular class to acess private member of the other class.
+// GETTERS AND SETTERS
+#include<iostream>
+using namespace std;
+class Car{
+    private:
+    int price;
+    
+    public:
+    int model_no;
+    char name[20];
+    
+    void start(){
+        cout<<"Grr.. starting the car.."<<name<<endl;
+        }
+    void setPrice(int p){
+        if(p>1000)
+        price=p;
+        else price=1000;
+    }
+    
+    int getPrice(){
+        return price;
+    }
+};
+int main(){
+    Car c;
+    c.model_no=1001;
+    c.name[0]='B';
+    c.name[1]='M';
+    c.name[2]='W';
+    c.name[3]='\0';
+    c.start();
+    c.setPrice(1200);
+    cout<<c.getPrice()<<endl;
+    
+}
